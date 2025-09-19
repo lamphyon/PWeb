@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Grid Modern</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f5f7f5;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 160px 1fr;
+      grid-template-rows: 70px 50px 1fr 60px;
+      min-height: 100vh;
+      gap: 8px;
+      padding: 8px;
+    }
+
+    header {
+      grid-area: header;
+      background: #4a7c59;
+      color: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #86a789;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: #dce8d6;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-weight: 500;
+    }
+
+    main {
+      grid-area: main;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #4a7c59;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>Header</header>
+    <nav>Menu navigation</nav>
+    <aside>Sidebar</aside>
+    <main>Main content</main>
+    <footer>Footer</footer>
+  </div>
+
+</body>
+</html>
