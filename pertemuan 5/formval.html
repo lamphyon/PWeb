@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validasi</title>
+	<style type="text/css">
+        body {
+            font-family: sans-serif;
+            background: #f9f9f9;
+        }
+        
+        .login {
+            padding: 1em;
+            margin: 3em auto;
+            width: 18em;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        label {
+            font-size: 11pt;
+        }
+        
+        input[type="text"], select {
+            padding: 8px;
+            width: 95%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 10pt;
+            margin: 6px 0px;
+            transition: border 0.2s;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border: 1px solid #3498db;
+            outline: none;
+        }
+        
+        .tombol {
+            background: #2ecc71;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+            padding: 10px 8px;
+            width: 100%;
+            font-size: 11pt;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tombol:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+<body>
+	<div class="login">
+		<form action="#" method="POST" onsubmit="return validasi()">
+			<div>
+				<label>Nama</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>NRP</label>
+				<input type="text" name="nrp" id="nrp" />
+			</div>
+			<div>
+				<label for="jurusan">Jurusan</label><br>
+                <select id="jurusan" name="jurusan" style="width: 100%">
+	                <option value="">Pilih Jurusan</option>
+	                <option value="teknik_informatika">Teknik Informatika</option>
+	                <option value="sistem_informasi">Sistem Informasi</option>
+	                <option value="teknologi_informasi">Teknologi Informasi</option>
+	                <option value="teknik_komputer">Teknik Komputer</option>
+	                <option value="teknik_biomedik">Teknik Biomedik</option>
+	                <option value="teknik_elektro">Teknik Elektro</option>
+                </select>
+			</div><br>
+			<div>
+				<input type="submit" value="Submit" class="tombol">
+			</div>
+		</form>
+	</div>
+
+<script type="text/javascript">
+	function validasi() {
+		let nama = document.getElementById("nama").value.trim();
+		let nrp = document.getElementById("nrp").value.trim();
+		let jurusan = document.getElementById("jurusan").value;
+
+		let pesan = [];
+		if (!nama) pesan.push("Nama");
+		if (!nrp) pesan.push("NRP");
+		if (!jurusan) pesan.push("Jurusan");
+
+		if (pesan.length > 0) {
+			alert(pesan.join(", ") + " tidak boleh kosong!");
+			return false;
+		}
+		return true;
+	}
+</script>
+</body>
+</html>
