@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown List</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        .container {
+            max-width: 300px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        h3 {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        select {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Pilih Produk & Merk</h3>
+        <form name="form1">   
+            <select name="Category" onChange="SelectCat2();">
+                <option value="">Pilih Jenis Produk</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Smartphone">Smartphone</option>
+            </select><br>
+            <select id="SubCat" name="SubCat">
+                <option value="">Pilih Merk</option>
+            </select>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function SelectCat2(){
+            removeAllOptions(document.form1.SubCat);
+            addOption(document.form1.SubCat, "", "Pilih Merk");
+            
+            if(document.form1.Category.value == 'Desktop'){   
+                addOption(document.form1.SubCat,"HP", "HP");
+                addOption(document.form1.SubCat,"MSI", "MSI");
+                addOption(document.form1.SubCat,"Apple", "Apple");
+            }
+            if(document.form1.Category.value == 'Laptop'){
+                addOption(document.form1.SubCat,"MacBook", "MacBook");
+                addOption(document.form1.SubCat,"Razer", "Razer");
+                addOption(document.form1.SubCat,"Microsoft Surface", "Microsoft Surface");
+            }
+            if(document.form1.Category.value == 'Smartphone'){
+                addOption(document.form1.SubCat,"iPhone", "iPhone");
+                addOption(document.form1.SubCat,"Xiaomi", "Xiaomi");
+                addOption(document.form1.SubCat,"OnePlus", "OnePlus");
+            }
+        }
+
+        function removeAllOptions(selectbox){
+            for(let i = selectbox.options.length-1; i >= 0; i--){
+                selectbox.remove(i);
+            }
+        }
+        
+        function addOption(selectbox, value, text){
+            var optn = document.createElement("OPTION");
+            optn.text = text;
+            optn.value = value;
+            selectbox.options.add(optn);
+        }
+    </script>
+</body>
+</html>
