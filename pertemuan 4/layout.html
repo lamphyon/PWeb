@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamphyon Portfolio</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+        }
+        h1 {
+            color: #1E74AD;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h3 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            padding: 7px;
+            width: 22%;
+            min-width: 250px;
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+        }
+        .box h1 {
+            background: linear-gradient(to right, #1E74AD 0%, #2692DB 50%, #10C1A5 100%);
+            color: white;
+            margin: 0;
+            padding: 12px;
+            font-size: 22px;
+            border-radius: 10px 10px 0 0;
+        }
+        .box p {
+            text-align: justify;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #333;
+        }
+        b {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: rgb(45, 133, 240);
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lamphyon</h1>
+    <h3>Exploring Code • Building Ideas</h3>
+    <hr>
+    <h3>Portfolio</h3>
+
+    <div class="container">
+        <div class="box">
+            <h1>HTML</h1>
+            <p>
+                <b>HTML Tutorials</b>
+                HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language.
+                HTML is the combination of Hypertext and Markup...
+            </p>
+        </div>
+        <div class="box">
+            <h1>CSS</h1>
+            <p>
+                <b>CSS Tutorials</b>
+                Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process 
+                of making web pages presentable. CSS...
+            </p>
+        </div>
+        <div class="box">
+            <h1>PHP</h1>
+            <p>
+                <b>PHP Tutorials</b>
+                The term PHP is an acronym for PHP: Hypertext Preprocessor. PHP is a server-side scripting language designed specifically 
+                for web development. PHP...
+            </p>
+        </div>
+        <div class="box">
+            <h1>JavaScript</h1>
+            <p>
+                <b>JavaScript Tutorials</b>
+                JavaScript was developed by Brendan Eich in 1995. At first, it was called LiveScript but was later renamed to JavaScript. 
+                JavaScript is the muscle of...
+            </p>
+        </div>
+    </div>
+</body>
+</html>
